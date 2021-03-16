@@ -1,0 +1,20 @@
+name: 'Get Latest Release Tag'
+author: Yorick Demichelis
+description: 'This action returns the latest release tag provided a list of releases in JSON'
+inputs:
+  releases:
+    description: 'JSON of GitHub Releases'
+    required: true
+  prefixed:
+    description: 'If you want the version to be prefixed with `v`'
+    required: true
+    default: 'false'
+outputs:
+  releases:
+    description: 'Releases data as JSON'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'box'
+  color: 'orange'
